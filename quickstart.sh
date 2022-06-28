@@ -15,4 +15,5 @@ sudo apt install -y linux-tools-common linux-tools-generic linux-tools-`uname -r
 cd safeside
 sed -i.bak "s/GRUB_CMDLINE_LINUX='/GRUB_CMDLINE_LINUX='mitigations=off /" /etc/default/grub
 sudo update-grub
+sudo reboot
 #./run01_all_intervals.sh
