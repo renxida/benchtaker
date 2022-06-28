@@ -13,5 +13,6 @@ sudo apt update
 sudo apt install -y cmake gcc ninja-build python3-dev protobuf-compiler g++ libncurses-dev
 sudo apt install -y linux-tools-common linux-tools-generic linux-tools-`uname -r`
 cd safeside
-sed -i "s/GRUB_CMDLINE_LINUX='/GRUB_CMDLINE_LINUX='mitigations=off /" /etc/default/grub
+sed -i.bak "s/GRUB_CMDLINE_LINUX='/GRUB_CMDLINE_LINUX='mitigations=off /" /etc/default/grub
+sudo update-grub
 #./run01_all_intervals.sh
