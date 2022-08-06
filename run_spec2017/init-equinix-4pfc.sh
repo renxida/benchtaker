@@ -30,7 +30,7 @@ cd ~/spec2017_install
 ./install.sh -f -d ~/spec2017
 
 
-cp ~/benchtaker/run_spec2017/benchtaker.cfg ~/spec2017/config/
+cp ~/benchtaker/run_spec2017/benchtaker-4pfc.cfg ~/spec2017/config/
 
 tee ~/spec2017/benchtaker.sh << EOF
 cd ~/spec2017
@@ -38,7 +38,7 @@ source ./shrc
 chmod +x ./benchtaker.sh
 for interval in 1 4 16 64 256 1024 4096 16384
 do
-	./bin/runcpu --define perfinterval=$interval -c perfinterval all
+	./bin/runcpu --define perfinterval=$interval -c benchtaker-4pfc all
 done
 EOF
 
