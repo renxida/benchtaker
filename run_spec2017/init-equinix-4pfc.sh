@@ -38,7 +38,7 @@ source ./shrc
 chmod +x ./benchtaker.sh
 for interval in 1 4 16 64 256 1024 4096 16384
 do
-	./bin/runcpu --define perfinterval=$interval -c benchtaker-4pfc all
+	./bin/runcpu --define perfinterval=\$interval -c benchtaker-4pfc all
 done
 EOF
 
